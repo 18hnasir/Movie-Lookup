@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="889.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Project2_sql_controller">
+   <children>
+      <Label layoutX="353.0" layoutY="21.0" text="Movie Search System">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="239.0" layoutY="74.0" prefHeight="343.0" prefWidth="567.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.5" minWidth="10.0" prefWidth="336.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.5" minWidth="10.0" prefWidth="401.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="movieid" text="MovieID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="title" text="Title" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="language" prefHeight="39.0" prefWidth="69.0" text="Language" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="productionCompany" text="Production Company" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="productionCountry" text="Production Country" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="releaseDate" text="Release Date" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="runtime" text="Runtime" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="movieid_text" GridPane.columnIndex="1" />
+            <TextField fx:id="title_text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="language_text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="productionCompany_text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="productionCountry_text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="releaseDate_text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="runtime_text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button fx:id="search" layoutX="253.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#searchMovie" text="Search" />
+      <TableView fx:id="tableview" layoutX="15.0" layoutY="497.0" prefHeight="381.0" prefWidth="1013.0">
+        <columns>
+          <TableColumn fx:id="movieid_column" prefWidth="75.0" text="MovieID" />
+          <TableColumn fx:id="title_column" prefWidth="138.0" text="Title" />
+            <TableColumn fx:id="language_column" prefWidth="74.5" text="Language" />
+            <TableColumn fx:id="productionCompany_column" prefWidth="206.0" text="Production Company" />
+            <TableColumn fx:id="productionCountry_column" prefWidth="174.5" text="Production Country" />
+            <TableColumn fx:id="releaseDate_column" prefWidth="127.5" text="Release Date" />
+            <TableColumn fx:id="runtime_column" prefWidth="107.0" text="Runtime" />
+            <TableColumn fx:id="avgrating_column" prefWidth="109.5" text="Average Rating" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

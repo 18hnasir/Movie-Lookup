@@ -1,0 +1,24 @@
+Name               Null?    Type          
+------------------ -------- ------------- 
+MOVIEID            NOT NULL NUMBER(38)    
+TITLE                       VARCHAR2(200) 
+LANGUAGE                    VARCHAR2(3)   
+PRODUCTION_COMPANY          VARCHAR2(800) 
+PRODUCTION_COUNTRY          VARCHAR2(800) 
+RELEASE_DATE                DATE          
+RUNTIME                     NUMBER(38)    
+Name       Null?    Type       
+---------- -------- ---------- 
+REVIEWERID NOT NULL NUMBER(38) 
+MOVIEID    NOT NULL NUMBER(38) 
+RATING              FLOAT(126) 
+
+  COUNT(*)
+----------
+      9025
+
+
+  COUNT(*)
+----------
+     99810
+

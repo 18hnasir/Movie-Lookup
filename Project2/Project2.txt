@@ -1,0 +1,19 @@
+CREATE TABLE Movies (
+	MovieID INTEGER NOT NULL,
+	Title VARCHAR2(50),
+	Language VARCHAR2(3),
+	Production_company VARCHAR2(200),
+	Production_country VARCHAR2(200),
+	Release_date DATE,
+	Runtime INTEGER,
+	PRIMARY KEY (MovieID)
+);
+
+CREATE TABLE Ratings (
+	ReviewerID INTEGER NOT NULL,
+	MovieID INTEGER,
+	Rating INTEGER,
+	PRIMARY KEY (ReviewerID),
+	FOREIGN KEY (MovieID) REFERENCES Movies (MovieID)
+);
+	
